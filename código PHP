@@ -1,0 +1,11 @@
+<?php
+$key = ftok(__FILE__, 'a');
+
+$semaphore = sem_get($key, 1);
+
+sem_acquire($semaphore);
+
+sem_release($semaphore);
+
+sem_remove($semaphore);
+?>
